@@ -1,0 +1,91 @@
+<!DOCTYPE>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Authentication Page</title>
+    <link rel="stylesheet" href="style.css" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Fresca&display=swap" rel="stylesheet"> 
+    <style>
+      body {
+  background-color: #e49ab0;
+  margin: 10% 20%;
+  color: #ecb8a5;
+  font-family: Arial, "sans serif";
+}
+
+h1 { 
+  padding-bottom: 5%;
+  font-size: 40px;
+  font-family: 'Fresca', sans-serif;
+}
+
+header {
+  padding: 0;
+  margin: 0 15%;
+  color: #904c77;
+}
+.CheckBox {
+  padding: 10% ;
+  margin: 5%;
+  background-color: #904c77;
+  text-align: center;
+  border-radius: 20px;
+}
+
+input, 
+button {
+  margin: 2%;
+}
+
+#rules {
+  padding-top: 2%;
+  display: none;
+}
+
+#rules ul li {
+  text-align: left;
+}
+
+#error {
+  color: red;
+  display : none;
+}
+    </style>
+  </head>
+  <body>
+    <header>
+     
+    </header>
+    <section class="CheckBox">
+      <h1>Login Form</h1>
+      <form action="#" method="post" name="authentication" id="authentication" class="authentication">
+        <label for="username">Enter your username :</label>
+        <br>
+        <input type="text" name="username" id="username" maxlenth="6-10" pattern="[A-Z]+" required>
+        <br>
+        <label for="password">Enter your password :</label>
+        <br>
+        <input type="password" name="password" id="password" minlength="6"   required>
+        <br>
+        <input id="sub" type="submit" value="Submit" onclick="Verify();"></input>
+       
+      </form> 
+    </section>
+    
+<script>
+//Submit Button
+function Verify() {
+  var userRef = "SuperBob";
+  var passRef = "12RobotoLove";
+  
+  var user =  document.getElementById("username").value;
+  var pass = document.getElementById("password").value;
+  if (user == userRef || pass == passRef) {
+  alert("Error")
+  } else {
+  alert("It's seem you make a mistake...")
+  }
+};
+</script>   
+</body>  
+</html>
